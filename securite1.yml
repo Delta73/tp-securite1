@@ -1,0 +1,11 @@
+---
+- name: "Install web "
+  become: yes
+  hosts: prod
+  vars_files:
+     - files/secret/credentials.yml
+  tasks:
+     - name: "Generate HTML "
+       template:
+          src: templates/index.html.j2
+          dest: /usr/share/nginx/html/index.html

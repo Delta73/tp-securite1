@@ -1,0 +1,8 @@
+---
+- name: Container Nginx
+    docker_container: 
+       name: nginx-server
+       image: nginx
+       port: "8080:80"
+   
+
